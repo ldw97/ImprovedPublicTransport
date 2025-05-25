@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Restore & Build
+    init: |
+      nuget restore ImprovedPublicTransport.sln || true
+      msbuild ImprovedPublicTransport.sln
+
+vscode:
+  extensions:
+    - ms-dotnettools.csharp
